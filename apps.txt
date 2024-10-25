@@ -9,3 +9,4 @@ networkmanager
 picom
 i3lock
 kitty
+breeze for mouse
