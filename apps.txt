@@ -3,7 +3,7 @@ install yay
 nemo
 polybar
 rofi+rofi catpuccin theme
-lxappearance
+lxappearance - Mareria-dark papirus-dark idk follow guide
 sddm catpuccin theme
 pavucontrol
 xrandr
