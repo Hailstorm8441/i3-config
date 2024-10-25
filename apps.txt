@@ -1,0 +1,11 @@
+nemo
+polybar
+rofi+rofi catpuccin theme
+lxappearance
+sddm catpuccin theme
+pavucontrol
+xrandr
+networkmanager
+picom
+i3lock
+kitty
