@@ -1,3 +1,5 @@
+install yay
+
 nemo
 polybar
 rofi+rofi catpuccin theme
