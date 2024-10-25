@@ -1,3 +1,4 @@
 ascii and wallpaper pictures
 fonts etc
+install nerd font (I don't really know how)
 everything else config
