@@ -1,4 +1,5 @@
 install yay
+install kde plasma
 
 nemo
 polybar
