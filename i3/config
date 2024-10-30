@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:DejaVu sans Mono 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -32,7 +32,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 exec_always picom -b
 
-
+exec_always xrandr --output eDP-1 --mode 1920x1080 --rate 144
 #wallpaper
 exec_always feh --bg-fill /home/hailstorm/Pictures/wallpapers/wallpaper.png 
 
@@ -41,8 +41,8 @@ exec_always feh --bg-fill /home/hailstorm/Pictures/wallpapers/wallpaper.png
 exec --no-startup-id nm-applet
 
 #change screen resolution
-exec xrandr --output Virtual-1 --mode 1920x1080
-
+exec xinput set-prop 15 'libinput Accel Speed' 0.3
+exec xinput set-prop 15 'libinput Natural Scrolling Enabled' 1
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym $mod+F3 exec pactl set-sink-volume @DEFAULT_SINK@ +5% #up
@@ -65,7 +65,7 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+x exec rofi -show dmenu
+bindsym $mod+x exec rofi -show drun
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
@@ -114,7 +114,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+d focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -213,6 +213,8 @@ gaps inner $inner_gaps
 
 gaps outer $outer_gaps
 
-bindsym $mod+d exec /home/$USER/.config/scripts/lock
+bindsym $mod+Control+l exec bash /home/$USER/.config/scripts/lock
+bindsym $mod+Control+p exec poweroff
+bindsym $mod+Control+r exec reboot
 
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id bash ~/.config/polybar/launch.sh
