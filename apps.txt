@@ -1,6 +1,9 @@
 install yay
 install kde plasma
 
+keepassxc
+brightness app
+xinput
 flatpak
 nemo
 polybar
