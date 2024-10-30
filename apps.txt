@@ -1,6 +1,7 @@
 install yay
 install kde plasma
 
+flatpak
 nemo
 polybar
 rofi+rofi catpuccin theme
